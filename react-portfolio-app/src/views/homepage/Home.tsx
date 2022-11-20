@@ -2,22 +2,28 @@ import * as React from 'react';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
-import { Container, Grid, Paper, styled } from '@mui/material';
+import { Container, Divider, Grid, Paper, styled } from '@mui/material';
 import { flexbox } from '@mui/system';
+import { dark } from '@mui/material/styles/createPalette';
+import Contact from '../contact/Contact';
+import Projects from '../projects/Projects';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 export default function Home() {
   const Item = styled(Paper)(({ theme }) => ({
-    // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
-    paddingTop: 40,
+    padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    fontSize: 13,
   }));
 
   return (
     <>
+      {/* <div className='bg'> */}
       <Container>
-        {/* <Grid container> */}
         <Grid item xs={12} md={12} lg={12}>
           <div className='hello-header'>Hello, I'm</div>
           <div className='name-header'>Roger Dirkx</div>
@@ -29,169 +35,84 @@ export default function Home() {
             2022.
           </div>
         </Grid>
-        {/* </Grid> */}
-        <Grid container paddingBottom={10}>
-          <Grid item xs={12} md={4} lg={4}>
-            <Item>
-              <img src='/linkedin.png' alt='linkedin' />
-            </Item>
+        <Grid container paddingBottom={7}>
+          <Grid item xs={4} md={4} lg={4}>
+            <div className='image'>
+              <a href='https://www.linkedin.com/in/rogerdirkx/'>
+                <img src='/linkedin.png'></img>
+              </a>
+            </div>
           </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <Item>
-              <img src='/github.png' alt='github' />
-            </Item>
+          <Grid item xs={4} md={4} lg={4}>
+            <div className='image'>
+              <a href='https://github.com/rogerUserGitHub'>
+                <img src='/github.png'></img>
+              </a>
+            </div>
           </Grid>
-          <Grid item xs={12} md={4} lg={4}>
-            <Item>
-              <img src='/react.png' alt='react' />
-            </Item>
+          <Grid item xs={4} md={4} lg={4}>
+            <div className='image'>
+              <a href='https://reactjs.org/'>
+                <img src='/react.png'></img>
+              </a>
+            </div>
           </Grid>
         </Grid>
         <Grid container>
-          <Grid item xs={12} md={6} lg={4}>
-            <Stack direction='row' spacing={7}>
-              <Chip
-                label='React'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='Typescript'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='.NET'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
+          <Grid item xs={12} md={4} lg={4}>
+            <Stack
+              direction='row'
+              // divider={<Divider orientation='vertical' flexItem />}
+              spacing={4}
+              alignItems='center'
+              justifyContent={'center'}
+              paddingBottom={3}
+            >
+              <Item elevation={5}>React</Item>
+              <Item elevation={5}>Typescript</Item>
+              <Item elevation={5}>Javascript</Item>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <Stack direction='row' spacing={7}>
-              <Chip
-                label='C#'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='AWS'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='Java'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
+          <Grid item xs={12} md={4} lg={4}>
+            <Stack
+              direction='row'
+              spacing={4}
+              alignItems='center'
+              justifyContent={'center'}
+              paddingBottom={3}
+            >
+              <Item elevation={5}>.NET</Item>
+              <Item elevation={5}>CI/CD</Item>
+              <Item elevation={5}>AWS</Item>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <Stack direction='row' spacing={7}>
-              <Chip
-                label='CI/CD'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='GIT'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='MySQL'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
+
+          <Grid item xs={12} md={4} lg={4}>
+            <Stack
+              direction='row'
+              spacing={4}
+              alignItems='center'
+              justifyContent={'center'}
+              paddingBottom={3}
+            >
+              <Item elevation={5}>Java</Item>
+              <Item elevation={5}>C#</Item>
+              <Item elevation={5}>GIT</Item>
             </Stack>
           </Grid>
-          {/* <Grid item xs={12} md={4} lg={4}>
-            <Stack direction='row' spacing={7}>
-              <Chip
-                label='React'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='Typescript'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='.NET'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='C#'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='AWS'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='Java'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='CI/CD'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='GIT'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-              <Chip
-                label='MySQL'
-                size='medium'
-                variant='filled'
-                color='primary'
-                avatar={<Avatar src='/static/images/avatar/1.jpg' />}
-              />
-            </Stack>
-          </Grid> */}
+        </Grid>
+        <Grid container textAlign={'center'}>
+          <Grid item xs={12} md={12} lg={12}>
+            <KeyboardDoubleArrowDownIcon
+              fontSize='large'
+              color='primary'
+              onClick={() => console.log('wwefwe')}
+            />
+          </Grid>
         </Grid>
       </Container>
+      <Projects />
+      <Projects />
     </>
   );
 }

@@ -5,6 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body > #root > div {
+  height: 100vh;
 }
 
 code {
@@ -15,4 +29,17 @@ code {
 body, html {
   height: 100%;
   margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\universe.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
