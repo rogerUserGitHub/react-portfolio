@@ -5,16 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
 
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body > #root > div {
@@ -31,9 +22,23 @@ body, html {
   margin: 0;
 }
 
-.bg {
+.bg-homepage {
   /* The image used */
-  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\universe.jpg");
+  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-projects {
+  /* The image used */
+  /* background-color: rgb(46, 46, 46); */
+  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\image2.png");
 
   /* Full height */
   height: 100%; 
