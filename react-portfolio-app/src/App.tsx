@@ -10,7 +10,6 @@ import Contact from './views/about/About';
 function App() {
   return (
     <Router>
-      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/projects' element={<Projects />} />

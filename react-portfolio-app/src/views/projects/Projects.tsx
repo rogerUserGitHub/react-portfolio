@@ -10,6 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useRef } from 'react';
+import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 
@@ -36,9 +37,13 @@ export default function Projects() {
             <Grid item xs={12} md={12} lg={12}>
               <div className='name-header-projects'>Projects</div>
             </Grid>
-            <Grid item xs={6} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={6}>
               <Card sx={{ maxWidth: 600, height: 550, componentShadowSX }}>
-                <CardActionArea href={`https://dailycrypto-react.netlify.app/`}>
+                <CardActionArea
+                  href={`https://dailycrypto-react.netlify.app/`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <CardMedia
                     component='img'
                     src={cryptoImage}
@@ -57,9 +62,13 @@ export default function Projects() {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={6} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={6}>
               <Card sx={{ maxWidth: 600, height: 550, componentShadowSX }}>
-                <CardActionArea href={`https://dailyweather-react.netlify.app/`}>
+                <CardActionArea
+                  href={`https://dailyweather-react.netlify.app/`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <CardMedia
                     component='img'
                     src={weatherImage}
@@ -81,22 +90,26 @@ export default function Projects() {
           <Grid item xs={6} md={12} lg={12}>
             <div className='projects-page-github'>Check out more on</div>
             <div className='image-project-page'>
-              <a href='https://github.com/rogerUserGitHub'>
-                <img src='/github.png'></img>
+              <a
+                href='https://github.com/rogerUserGitHub'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img className='images-contact' src='/github.png'></img>
               </a>
             </div>
           </Grid>
-          <Grid container textAlign={'center'}>
-            <Grid item xs={12} md={12} lg={12}>
+          <Grid container>
+            <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
               <div>
                 <a>
-                  <br></br> <br></br> <br></br> <br></br>
                   <img src='/arrow.png'></img>
                 </a>
               </div>
             </Grid>
           </Grid>
         </Container>
+        <About />
       </div>
     </>
   );
