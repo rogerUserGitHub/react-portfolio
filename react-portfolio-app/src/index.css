@@ -8,10 +8,6 @@ body {
 
 }
 
-/* body > #root > div {
-  height: 100vh;
-} */
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -27,7 +23,7 @@ body, html {
   background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
 
   /* Full height */
-  height: 105vh;
+  height: 100vh;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -65,7 +61,7 @@ body, html {
 
 .bg-about-2 {
   /* The image used */
-  background-color: rgba(230, 125, 34, 0.837);
+  background-color: rgb(230, 125, 34);
 
   /* Full height */
   /* height: 100vh; */

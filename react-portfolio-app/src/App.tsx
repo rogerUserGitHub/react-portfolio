@@ -1,7 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './common/components/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/homepage/Home';
 import Projects from './views/projects/Projects';

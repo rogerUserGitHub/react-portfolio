@@ -127,10 +127,9 @@ export default function Home() {
             <div className='name-header'>Roger Dirkx</div>
             <div className='home-title'>Software Developer</div>
             <div className='home-intro'>
-              <b>fullstack</b> | based in the Netherlands <br></br>
+              <b>fullstack </b> since 2021
+              <br></br>based in the Netherlands <br></br>
               passion for building user-friendly and visually-appealing applications
-              <br></br>
-              coding since 2021
             </div>
           </Grid>
           <Grid container className='home-container'>

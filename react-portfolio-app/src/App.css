@@ -115,33 +115,6 @@ img {
   color: antiquewhite;
 }
 
-/* -------------- navbar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /* background-color: rgb(40, 49, 75); */
-  background-color: rgba(55, 56, 58, 0.734);
-}
-
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: whitesmoke;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.li a:hover {
-  background-color: rgb(162, 26, 26);
-  color: rgb(211, 111, 111);
-}
-
 img:hover{
   -o-transition:.5s;
   -ms-transition:.5s;
@@ -161,21 +134,20 @@ img:hover{
   left: 0;
   right: 0;
   height: 10px;
-  background: var(--red);
+  background: var(--orange);
   transform-origin: 0%;
 }
 
 body {
 
-  --red: #ff9900;
+  --orange: #ff9900;
 
   --background: var(--white);
   --accent: var(--black);
 
   margin: 0;
   padding: 0;
-  background-color: var(--background);
-  color: var(--accent);
+
   padding-bottom: 20px;
 }
 
