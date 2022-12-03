@@ -62,11 +62,9 @@ img {
 
 .projects-page-github {
   font-size: 3em;
-  font-size: 2em;
   text-align: center;
   padding-top: 1em;
   color: antiquewhite;
-  padding-bottom: 1em;
 }
 
 .name-header {
@@ -156,3 +154,28 @@ img:hover{
 .hompepage-header {
   text-align: left;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
+}
+
+body {
+
+  --red: #ff9900;
+
+  --background: var(--white);
+  --accent: var(--black);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+  padding-bottom: 20px;
+}
+

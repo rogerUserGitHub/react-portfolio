@@ -6,7 +6,7 @@ export default function About() {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={12} lg={12}>
-            <div className='name-header-about'>About me</div>
+            <div className='name-header-about'>About</div>
           </Grid>
         </Grid>
       </Container>
