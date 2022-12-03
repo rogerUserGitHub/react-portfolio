@@ -15,11 +15,11 @@ import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-po
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 
 const componentShadowSX = {
-  '&:hover': {
-    color: 'green',
-    border: '1px solid',
-    boxShadow: '5px 10px red',
-  },
+  // '&:hover': {
+  //   color: 'green',
+  //   border: '1px solid',
+  //   boxShadow: '5px 10px red',
+  // },
 };
 
 export default function Projects() {
@@ -109,7 +109,6 @@ export default function Projects() {
             </Grid>
           </Grid>
         </Container>
-        <About />
       </div>
     </>
   );

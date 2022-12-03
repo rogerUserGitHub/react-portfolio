@@ -31,6 +31,10 @@ img {
 }
 
 /* -------------- home */
+.home-container {
+  padding-top: 4em;
+}
+
 .home-title {
   font-size: 2em;
   font-weight: 300;
@@ -66,7 +70,7 @@ img {
 }
 
 .name-header {
-  color: rgba(175, 192, 19, 0.888);
+  color: rgba(116, 162, 41, 0.74);
   font-size: 5em;
   font-weight: 500;
   text-align: center;
@@ -78,10 +82,11 @@ img {
 }
 
 .name-header-projects {
-  color: rgba(175, 192, 19, 0.888);
+  color: rgba(116, 162, 41, 0.74);
   font-size: 5em;
   font-weight: 500;
   text-align: center;
+  padding-bottom: 0.5em;
 }
 
 .image-project-page {
@@ -91,7 +96,7 @@ img {
 
 /* -------------- about */
 .name-header-about {
-  color: rgba(175, 192, 19, 0.888); 
+  color: rgba(116, 162, 41, 0.74);
   font-size: 5em;
   font-weight: 500;
   text-align: center;
