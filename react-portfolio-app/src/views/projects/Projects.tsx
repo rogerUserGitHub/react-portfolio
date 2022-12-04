@@ -1,8 +1,6 @@
 import {
-  Button,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Container,
@@ -10,7 +8,6 @@ import {
   Typography,
 } from '@mui/material';
 import { useRef } from 'react';
-import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 

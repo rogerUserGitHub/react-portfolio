@@ -61,7 +61,8 @@ body, html {
 
 .bg-about-2 {
   /* The image used */
-  background-color: rgb(230, 125, 34);
+  /* background-color: rgba(51, 235, 180, 0.603); */
+  background-color: rgba(51, 235, 122, 0.564);
 
   /* Full height */
   /* height: 100vh; */

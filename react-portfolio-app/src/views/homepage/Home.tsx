@@ -196,7 +196,7 @@ export default function Home() {
                 justifyContent='space-around'
                 alignItems='flex-end'
               >
-                <Grid item xs={12} md={12} lg={12}>
+                <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
                   <Card
                     sx={{
                       maxWidth: 600,
@@ -230,32 +230,32 @@ export default function Home() {
                           </Typography>
                           <Chip
                             label='React'
-                            color='warning'
-                            variant='outlined'
+                            color='success'
+                            variant='filled'
                             onClick={() => handleChipClick('react')}
                           ></Chip>
                           <Chip
                             label='Typescript'
-                            color='warning'
-                            variant='outlined'
+                            color='success'
+                            variant='filled'
                             onClick={() => handleChipClick('typescript')}
                           ></Chip>
                           <Chip
                             label='Third-party APIs'
-                            color='warning'
-                            variant='outlined'
+                            color='success'
+                            variant='filled'
                             onClick={() => handleChipClick('coingecko')}
                           ></Chip>
                           <Chip
                             label='MUI library'
-                            color='warning'
-                            variant='outlined'
+                            color='success'
+                            variant='filled'
                             onClick={() => handleChipClick('mui')}
                           ></Chip>
                           <Chip
                             label='i18n translation'
-                            color='warning'
-                            variant='outlined'
+                            color='success'
+                            variant='filled'
                             onClick={() => handleChipClick('i18n')}
                           ></Chip>
                         </CardContent>
@@ -296,20 +296,20 @@ export default function Home() {
                         </Typography>
                         <Chip
                           label='React'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('react')}
                         ></Chip>
                         <Chip
                           label='Typescript'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('typescript')}
                         ></Chip>
                         <Chip
                           label='Third-party APIs'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('rapidapi')}
                         ></Chip>
                       </CardContent>
@@ -318,7 +318,6 @@ export default function Home() {
                 </Card>
               </Grid>
             </Grid>
-
             <Grid
               container
               direction='column-reverse'
@@ -359,32 +358,32 @@ export default function Home() {
                         </Typography>
                         <Chip
                           label='React'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('react')}
                         ></Chip>
                         <Chip
                           label='Typescript'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('typescript')}
                         ></Chip>
                         <Chip
                           label='Third-party APIs'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('coingecko')}
                         ></Chip>
                         <Chip
                           label='MUI library'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           onClick={() => handleChipClick('mui')}
                         ></Chip>
                         <Chip
                           label='Darkmode'
-                          color='warning'
-                          variant='outlined'
+                          color='success'
+                          variant='filled'
                           // onClick={() => handleChipClick('i18n')}
                         ></Chip>
                       </CardContent>
@@ -393,18 +392,20 @@ export default function Home() {
                 </Card>
               </Grid>
             </Grid>
-            <Grid item xs={6} md={12} lg={12}>
-              <div className='projects-page-github'>Check out more on</div>
-              <div className='image-project-page'>
-                <a
-                  href='https://github.com/rogerUserGitHub'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <img className='images-contact' src='/github.png'></img>
-                </a>
-              </div>
-            </Grid>
+            <FadeInWhenVisible>
+              <Grid item xs={6} md={12} lg={12}>
+                <div className='projects-page-github'>Check out more on</div>
+                <div className='image-project-page'>
+                  <a
+                    href='https://github.com/rogerUserGitHub'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img className='images-contact' src='/github.png'></img>
+                  </a>
+                </div>
+              </Grid>
+            </FadeInWhenVisible>
             <Grid container>
               <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
                 <div onClick={handleClick2}>
