@@ -68,7 +68,7 @@ img {
 }
 
 .name-header {
-  color:  rgba(51, 235, 122, 0.564);
+  color:  rgba(161, 202, 46, 0.678);
   font-size: 5em;
   font-weight: 500;
   text-align: center;
@@ -142,7 +142,7 @@ img:hover{
 
 body {
 
-  --green:  rgba(51, 235, 122, 0.564);
+  --green:  rgba(161, 202, 46, 0.678);
 
   /* --background: var(--white);
   --accent: var(--black); */

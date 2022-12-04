@@ -15,6 +15,8 @@ import { useEffect, useRef } from 'react';
 import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
+import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/construction.jpg';
+
 import { motion, useScroll } from 'framer-motion';
 
 export default function Home() {
@@ -344,13 +346,13 @@ export default function Home() {
                     >
                       <CardMedia
                         component='img'
-                        src={cryptoImage}
+                        src={constructionimage}
                         alt='dailycrypto'
                         style={Style}
                       />
                       <CardContent>
                         <Typography gutterBottom variant='h5' component='div'>
-                          FoodApp (under construction)
+                          RecipeApp
                         </Typography>
                         <Typography variant='body2' color='white' paddingBottom={1}>
                           This react application will allow a user to enter ingredients,

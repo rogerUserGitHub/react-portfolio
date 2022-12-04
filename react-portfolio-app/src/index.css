@@ -23,7 +23,7 @@ body, html {
   background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
 
   /* Full height */
-  height: 100vh;
+  height: 103vh;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -62,7 +62,7 @@ body, html {
 .bg-about-2 {
   /* The image used */
   /* background-color: rgba(51, 235, 180, 0.603); */
-  background-color: rgba(51, 235, 122, 0.564);
+  background-color: rgba(161, 202, 46, 0.678);
 
   /* Full height */
   /* height: 100vh; */
