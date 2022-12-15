@@ -11,19 +11,25 @@ import {
   styled,
   Typography,
 } from '@mui/material';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/construction.jpg';
-
 import { motion, useScroll } from 'framer-motion';
+import Dialog from '../../common/components/Dialog';
+import { handleChipClick } from '../../common/utils/HelperMethods';
 
 export default function Home() {
+  /*
+   * State
+   */
   const { scrollYProgress } = useScroll();
   const { scrollY } = useScroll();
   const headerRefProjects = useRef<null | HTMLDivElement>(null);
   const headerRefAbout = useRef<null | HTMLDivElement>(null);
+  const [infoItem, setInfoItem] = useState('');
+  const [infoOpen, setInfoOpen] = useState(false);
 
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -65,43 +71,30 @@ export default function Home() {
   /*
    * handlers
    */
-  const handleClick = () => {
+  const handleItemClick = (evt: any) => {
+    setInfoItem(evt.target.id);
+    setInfoOpen(true);
+  };
+
+  const handleArrowClick = () => {
     headerRefProjects?.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleClick2 = () => {
+  const handleArrowClick2 = () => {
     headerRefAbout?.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleChipClick = (name: string) => {
-    let url = '';
-    switch (name) {
-      case 'react':
-        url = 'https://reactjs.org/';
-        break;
-      case 'typescript':
-        url = 'https://www.typescriptlang.org/';
-        break;
-      case 'mui':
-        url = 'https://mui.com/';
-        break;
-      case 'i18n':
-        url = 'https://www.i18next.com/';
-        break;
-      case 'coingecko':
-        url = 'https://www.coingecko.com/en/api';
-        break;
-      case 'react':
-        url = 'https://reactjs.org/';
-        break;
-      case 'rapidapi':
-        url = 'https://rapidapi.com/hub';
-        break;
-    }
-    openInNewTab(url);
+  const handleOpen = () => {
+    setInfoOpen(true);
   };
 
-  const openInNewTab = (url: string): void => {
+  const handleClose = () => {
+    setInfoOpen(false);
+  };
+
+  const openInNewTab = (name: string): any => {
+    const url = handleChipClick(name);
+
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
   };
@@ -115,6 +108,9 @@ export default function Home() {
     });
   }, []);
 
+  /*
+   * render
+   */
   return (
     <>
       <motion.div
@@ -143,9 +139,15 @@ export default function Home() {
                 justifyContent={'center'}
                 paddingBottom={1}
               >
-                <Item elevation={5}>React</Item>
-                <Item elevation={5}>Typescript</Item>
-                <Item elevation={5}>Javascript</Item>
+                <Item elevation={5} id={'React'} onClick={handleItemClick}>
+                  React
+                </Item>
+                <Item elevation={5} id={'Typescript'} onClick={handleItemClick}>
+                  Typescript
+                </Item>
+                <Item elevation={5} id={'Javascript'} onClick={handleItemClick}>
+                  Javascript
+                </Item>
               </Stack>
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
@@ -156,9 +158,15 @@ export default function Home() {
                 justifyContent={'center'}
                 paddingBottom={1}
               >
-                <Item elevation={5}>.NET</Item>
-                <Item elevation={5}>CI/CD</Item>
-                <Item elevation={5}>AWS</Item>
+                <Item elevation={5} id={'.NET'} onClick={handleItemClick}>
+                  .NET
+                </Item>
+                <Item elevation={5} id={'CI/CD'} onClick={handleItemClick}>
+                  CI/CD
+                </Item>
+                <Item elevation={5} id={'AWS'} onClick={handleItemClick}>
+                  AWS
+                </Item>
               </Stack>
             </Grid>
             <Grid item xs={12} md={4} lg={4}>
@@ -168,15 +176,21 @@ export default function Home() {
                 alignItems='center'
                 justifyContent={'center'}
               >
-                <Item elevation={5}>Java</Item>
-                <Item elevation={5}>C#</Item>
-                <Item elevation={5}>GIT</Item>
+                <Item elevation={5} id={'Java'} onClick={handleItemClick}>
+                  Java
+                </Item>
+                <Item elevation={5} id={'C#'} onClick={handleItemClick}>
+                  C#
+                </Item>
+                <Item elevation={5} id={'GIT'} onClick={handleItemClick}>
+                  GIT
+                </Item>
               </Stack>
             </Grid>
           </Grid>
           <Grid container>
             <Grid item xs={12} md={12} lg={12} className='arrow'>
-              <div onClick={handleClick}>
+              <div onClick={handleArrowClick}>
                 <a>
                   <img src='/arrow.png'></img>
                 </a>
@@ -234,31 +248,31 @@ export default function Home() {
                             label='React'
                             color='success'
                             variant='filled'
-                            onClick={() => handleChipClick('react')}
+                            onClick={() => openInNewTab('react')}
                           ></Chip>
                           <Chip
                             label='Typescript'
                             color='success'
                             variant='filled'
-                            onClick={() => handleChipClick('typescript')}
+                            onClick={() => openInNewTab('typescript')}
                           ></Chip>
                           <Chip
                             label='Third-party APIs'
                             color='success'
                             variant='filled'
-                            onClick={() => handleChipClick('coingecko')}
+                            onClick={() => openInNewTab('coingecko')}
                           ></Chip>
                           <Chip
                             label='MUI library'
                             color='success'
                             variant='filled'
-                            onClick={() => handleChipClick('mui')}
+                            onClick={() => openInNewTab('mui')}
                           ></Chip>
                           <Chip
                             label='i18n translation'
                             color='success'
                             variant='filled'
-                            onClick={() => handleChipClick('i18n')}
+                            onClick={() => openInNewTab('i18n')}
                           ></Chip>
                         </CardContent>
                       </CardActionArea>
@@ -300,19 +314,19 @@ export default function Home() {
                           label='React'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('react')}
+                          onClick={() => openInNewTab('react')}
                         ></Chip>
                         <Chip
                           label='Typescript'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('typescript')}
+                          onClick={() => openInNewTab('typescript')}
                         ></Chip>
                         <Chip
                           label='Third-party APIs'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('rapidapi')}
+                          onClick={() => openInNewTab('rapidapi')}
                         ></Chip>
                       </CardContent>
                     </CardActionArea>
@@ -362,31 +376,31 @@ export default function Home() {
                           label='React'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('react')}
+                          onClick={() => openInNewTab('react')}
                         ></Chip>
                         <Chip
                           label='Typescript'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('typescript')}
+                          onClick={() => openInNewTab('typescript')}
                         ></Chip>
                         <Chip
                           label='Third-party APIs'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('coingecko')}
+                          onClick={() => openInNewTab('coingecko')}
                         ></Chip>
                         <Chip
                           label='MUI library'
                           color='success'
                           variant='filled'
-                          onClick={() => handleChipClick('mui')}
+                          onClick={() => openInNewTab('mui')}
                         ></Chip>
                         <Chip
                           label='Darkmode'
                           color='success'
                           variant='filled'
-                          // onClick={() => handleChipClick('i18n')}
+                          // onClick={() => openInNewTab('i18n')}
                         ></Chip>
                       </CardContent>
                     </CardActionArea>
@@ -410,7 +424,7 @@ export default function Home() {
             </FadeInWhenVisible>
             <Grid container>
               <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
-                <div onClick={handleClick2}>
+                <div onClick={handleArrowClick2}>
                   <a>
                     <img src='/arrow.png'></img>
                   </a>
@@ -423,6 +437,12 @@ export default function Home() {
       <div ref={headerRefAbout}>
         <About />
       </div>
+      <Dialog
+        infoItem={infoItem}
+        onOpen={handleOpen}
+        onClose={handleClose}
+        open={infoOpen}
+      />
     </>
   );
 }
