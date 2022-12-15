@@ -64,9 +64,6 @@ const CustomizedDialogs: FC<IProps> = (props: IProps) => {
 
   return (
     <div>
-      <Button variant='outlined' onClick={onOpen}>
-        Open dialog
-      </Button>
       <BootstrapDialog
         onClose={onClose}
         aria-labelledby='customized-dialog-title'

@@ -7,11 +7,9 @@ import {
   Container,
   Chip,
   Grid,
-  Paper,
-  styled,
   Typography,
 } from '@mui/material';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
@@ -19,37 +17,18 @@ import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/re
 import { motion, useScroll } from 'framer-motion';
 import Dialog from '../../common/components/Dialog';
 import { handleChipClick } from '../../common/utils/HelperMethods';
+import { Item } from '../../common/components/Item';
+import { Style } from './Home.Styles';
 
 export default function Home() {
   /*
    * State
    */
   const { scrollYProgress } = useScroll();
-  const { scrollY } = useScroll();
   const headerRefProjects = useRef<null | HTMLDivElement>(null);
   const headerRefAbout = useRef<null | HTMLDivElement>(null);
   const [infoItem, setInfoItem] = useState('');
   const [infoOpen, setInfoOpen] = useState(false);
-
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 13,
-  }));
-
-  const Style = {
-    height: 300,
-  };
-
-  const componentShadowSX = {
-    // '&:hover': {
-    //   // color: 'blue',
-    //   // border: '1px solid',
-    //   // boxShadow: '5px 10px red',
-    // },
-  };
 
   const FadeInWhenVisible = ({ children }: any) => {
     return (
@@ -98,15 +77,6 @@ export default function Home() {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
   };
-
-  /*
-   * useEffect
-   */
-  useEffect(() => {
-    return scrollY.onChange(latest => {
-      console.log('Page scroll: ', latest);
-    });
-  }, []);
 
   /*
    * render
@@ -217,7 +187,7 @@ export default function Home() {
                     sx={{
                       maxWidth: 600,
                       height: 480,
-                      componentShadowSX,
+
                       textAlign: 'right',
                       alignItems: 'flex-end',
                       backgroundColor: 'rgba(25, 26, 30, 255)',
@@ -285,7 +255,6 @@ export default function Home() {
                   sx={{
                     maxWidth: 600,
                     height: 480,
-                    componentShadowSX,
                     backgroundColor: 'rgba(25, 26, 30, 255)',
                     color: 'rgba(116, 162, 41, 0.74);',
                   }}
@@ -345,7 +314,6 @@ export default function Home() {
                   sx={{
                     maxWidth: 600,
                     height: 480,
-                    componentShadowSX,
                     textAlign: 'right',
                     alignItems: 'flex-end',
                     backgroundColor: 'rgba(25, 26, 30, 255)',
@@ -396,12 +364,7 @@ export default function Home() {
                           variant='filled'
                           onClick={() => openInNewTab('mui')}
                         ></Chip>
-                        <Chip
-                          label='Darkmode'
-                          color='success'
-                          variant='filled'
-                          // onClick={() => openInNewTab('i18n')}
-                        ></Chip>
+                        <Chip label='Darkmode' color='success' variant='filled'></Chip>
                       </CardContent>
                     </CardActionArea>
                   </FadeInWhenVisible>
