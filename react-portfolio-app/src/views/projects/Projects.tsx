@@ -7,24 +7,13 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import { useRef } from 'react';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
-
-const componentShadowSX = {
-  // '&:hover': {
-  //   color: 'green',
-  //   border: '1px solid',
-  //   boxShadow: '5px 10px red',
-  // },
-};
 
 export default function Projects() {
   const Style = {
     height: 400,
   };
-
-  const titleRef = useRef();
 
   return (
     <>
@@ -35,7 +24,7 @@ export default function Projects() {
               <div className='name-header-projects'>Projects</div>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <Card sx={{ maxWidth: 600, height: 550, componentShadowSX }}>
+              <Card sx={{ maxWidth: 600, height: 550 }}>
                 <CardActionArea
                   href={`https://dailycrypto-react.netlify.app/`}
                   target='_blank'
@@ -60,7 +49,7 @@ export default function Projects() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <Card sx={{ maxWidth: 600, height: 550, componentShadowSX }}>
+              <Card sx={{ maxWidth: 600, height: 550 }}>
                 <CardActionArea
                   href={`https://dailyweather-react.netlify.app/`}
                   target='_blank'
