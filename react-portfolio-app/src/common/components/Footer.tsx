@@ -1,7 +1,7 @@
 import { Container, Grid } from '@mui/material';
 
 const Footer = () => (
-  <div className='footer'>
+  <div className='footer bg-about-footer'>
     <Container>
       <Grid container>
         <Grid item xs={12} md={12} lg={12}>
