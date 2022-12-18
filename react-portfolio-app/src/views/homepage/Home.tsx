@@ -371,7 +371,7 @@ export default function Home() {
                 </Card>
               </Grid>
             </Grid>
-            <FadeInWhenVisible>
+            {/* <FadeInWhenVisible>
               <Grid item xs={6} md={12} lg={12}>
                 <div className='projects-page-github'>Check out more on</div>
                 <div className='image-project-page'>
@@ -384,7 +384,7 @@ export default function Home() {
                   </a>
                 </div>
               </Grid>
-            </FadeInWhenVisible>
+            </FadeInWhenVisible> */}
             <Grid container>
               <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
                 <div onClick={handleArrowClick2}>
