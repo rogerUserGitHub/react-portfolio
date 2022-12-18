@@ -157,14 +157,12 @@ export default function Home() {
                 </Item>
               </Stack>
             </Grid>
-            <Grid container>
-              <Grid item xs={12} md={12} lg={12} className='arrow'>
-                <div onClick={handleArrowClick}>
-                  <a>
-                    <img src='/arrow.png'></img>
-                  </a>
-                </div>
-              </Grid>
+            <Grid item xs={12} md={12} lg={12} className='arrow'>
+              <div onClick={handleArrowClick}>
+                <a>
+                  <img src='/arrow.png'></img>
+                </a>
+              </div>
             </Grid>
           </Grid>
         </Container>
