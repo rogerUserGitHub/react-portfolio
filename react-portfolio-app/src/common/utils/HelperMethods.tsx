@@ -55,6 +55,12 @@ export const handleChipClick = (name: string): any => {
     case 'rapidapi':
       url = 'https://rapidapi.com/hub';
       break;
+    case 'firebase':
+      url = 'https://firebase.google.com/';
+      break;
+    case 'tailwind':
+      url = 'https://tailwindcss.com/';
+      break;
   }
   return url;
 };

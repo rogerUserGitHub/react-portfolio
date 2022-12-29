@@ -14,6 +14,7 @@ import About from '../about/About';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/construction.jpg';
+import todo from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/todo.png';
 import { motion, useScroll } from 'framer-motion';
 import Dialog from '../../common/components/Dialog';
 import { handleChipClick } from '../../common/utils/HelperMethods';
@@ -174,6 +175,55 @@ export default function Home() {
               <Grid item xs={12} md={12} lg={12}>
                 <div className='name-header-projects'>Projects</div>
               </Grid>
+              <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
+                <Card
+                  sx={{
+                    maxWidth: 600,
+                    height: 480,
+                    backgroundColor: 'rgba(25, 26, 30, 255)',
+                    color: 'rgba(116, 162, 41, 0.74);',
+                    textAlign: 'right',
+                    alignItems: 'flex-end',
+                  }}
+                >
+                  <FadeInWhenVisible>
+                    <CardActionArea
+                      href={`https://todo-app-fedc3.web.app/`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <CardMedia component='img' src={todo} alt='todo' style={Style} />
+                      <CardContent>
+                        <Typography gutterBottom variant='h5' component='div'>
+                          Todo app with FireBase and Tailwind
+                        </Typography>
+                        <Typography variant='body2' color='white' paddingBottom={1}>
+                          Testproject using firebase (firestore and hosting) and css
+                          tailwind
+                        </Typography>
+                        <Chip
+                          label='React'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('react')}
+                        ></Chip>
+                        <Chip
+                          label='FireBase'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('firebase')}
+                        ></Chip>
+                        <Chip
+                          label='Tailwind'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('tailwind')}
+                        ></Chip>
+                      </CardContent>
+                    </CardActionArea>
+                  </FadeInWhenVisible>
+                </Card>
+              </Grid>
               <Grid
                 container
                 direction='column-reverse'
@@ -185,7 +235,6 @@ export default function Home() {
                     sx={{
                       maxWidth: 600,
                       height: 480,
-
                       textAlign: 'right',
                       alignItems: 'flex-end',
                       backgroundColor: 'rgba(25, 26, 30, 255)',
@@ -369,20 +418,6 @@ export default function Home() {
                 </Card>
               </Grid>
             </Grid>
-            {/* <FadeInWhenVisible>
-              <Grid item xs={6} md={12} lg={12}>
-                <div className='projects-page-github'>Check out more on</div>
-                <div className='image-project-page'>
-                  <a
-                    href='https://github.com/rogerUserGitHub'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <img className='images-contact' src='/github.png'></img>
-                  </a>
-                </div>
-              </Grid>
-            </FadeInWhenVisible> */}
             <Grid container>
               <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
                 <div onClick={handleArrowClick2}>
