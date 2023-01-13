@@ -195,7 +195,7 @@ export default function Home() {
                   >
                     <FadeInWhenVisible>
                       <CardActionArea
-                        href={`https://wordle-1a9cb.web.app/`}
+                        href={``}
                         target='_blank'
                         rel='noopener noreferrer'
                       >
