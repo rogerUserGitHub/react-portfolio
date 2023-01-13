@@ -24,12 +24,12 @@ export default function About() {
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
                 <div className='text-about-me'>
-                  I am a <b>fullstack developer</b> based in the Netherlands. I embarked
-                  on my developer journey in February 2022, when I started an intensive
-                  course at the University of Amsterdam to become a software engineer.
-                  Currently, I am working for a software company in Amsterdam, where I
-                  have been working with front- and backend frameworks and libraries
-                  such as React and .NET/C#.
+                  I am a <b>full stack developer</b> based in Geneva, Switzerland. I
+                  embarked on my developer journey in February 2022, when I started an
+                  intensive course at the University of Amsterdam to become a software
+                  engineer. Currently, I am working for a software company in Amsterdam,
+                  where I have been working with front- and backend frameworks and
+                  libraries such as React and .NET/C#.
                 </div>
                 <Grid container paddingTop={7}>
                   <Grid item xs={6} md={6} lg={6} className='images-contact'>

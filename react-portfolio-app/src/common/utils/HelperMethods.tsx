@@ -61,6 +61,9 @@ export const handleChipClick = (name: string): any => {
     case 'tailwind':
       url = 'https://tailwindcss.com/';
       break;
+    case 'javascript':
+      url = 'https://www.javascript.com/';
+      break;
   }
   return url;
 };

@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { useRef, useState } from 'react';
 import About from '../about/About';
+import wordle from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/wordle.jpg';
 import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
 import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
 import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/construction.jpg';
@@ -96,9 +97,9 @@ export default function Home() {
             <div className='name-header'>Roger Dirkx</div>
             <div className='home-title'>Software Developer</div>
             <div className='home-intro'>
-              <b>fullstack </b> since 2021
-              <br></br>based in the Netherlands <br></br>
-              passion for building user-friendly and visually-appealing applications
+              <b>full stack </b> since 2021
+              <br></br>based in Geneva <br></br>
+              passionate about building functional and user-friendly applications
             </div>
           </Grid>
           <Grid container className='home-container'>
@@ -174,6 +175,74 @@ export default function Home() {
             <Grid container>
               <Grid item xs={12} md={12} lg={12}>
                 <div className='name-header-projects'>Projects</div>
+              </Grid>
+              <Grid
+                container
+                direction='column-reverse'
+                justifyContent='space-around'
+                alignItems='flex-end'
+              >
+                <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
+                  <Card
+                    sx={{
+                      maxWidth: 600,
+                      height: 480,
+                      textAlign: 'right',
+                      alignItems: 'flex-end',
+                      backgroundColor: 'rgba(25, 26, 30, 255)',
+                      color: 'rgba(116, 162, 41, 0.74);',
+                    }}
+                  >
+                    <FadeInWhenVisible>
+                      <CardActionArea
+                        href={`https://wordle-1a9cb.web.app/`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <CardMedia
+                          component='img'
+                          src={wordle}
+                          alt='dailycrypto'
+                          style={Style}
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant='h5' component='div'>
+                            Wordle clone with FireBase and Tailwind
+                          </Typography>
+                          <Typography variant='body2' color='white' paddingBottom={1}>
+                            Application built in React.js, based on the popular wordle
+                            game. Use of Firebase Authentication and firestore data
+                            storage
+                          </Typography>
+                          <Chip
+                            label='React'
+                            color='success'
+                            variant='filled'
+                            onClick={() => openInNewTab('react')}
+                          ></Chip>
+                          <Chip
+                            label='Javascript'
+                            color='success'
+                            variant='filled'
+                            onClick={() => openInNewTab('javascript')}
+                          ></Chip>
+                          <Chip
+                            label='Firebase'
+                            color='success'
+                            variant='filled'
+                            onClick={() => openInNewTab('firebase')}
+                          ></Chip>
+                          <Chip
+                            label='Tailwind'
+                            color='success'
+                            variant='filled'
+                            onClick={() => openInNewTab('tailwind')}
+                          ></Chip>
+                        </CardContent>
+                      </CardActionArea>
+                    </FadeInWhenVisible>
+                  </Card>
+                </Grid>
               </Grid>
               <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
                 <Card
