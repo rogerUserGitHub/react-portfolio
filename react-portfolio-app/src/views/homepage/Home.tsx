@@ -93,72 +93,18 @@ export default function Home() {
       <div className='bg-homepage'>
         <Container>
           <Grid item xs={12} md={12} lg={12}>
-            <div className='hello-header'>Hello, I'm</div>
-            <div className='name-header'>Roger Dirkx</div>
-            <div className='home-title'>Software Developer</div>
-            <div className='home-intro'>
-              <b>full stack </b> since 2021
-              <br></br>based in Geneva <br></br>
-              passionate about building functional and user-friendly applications
+            <div className='home-box'>
+              <div className='hello-header'>Hello, I'm</div>
+              <div className='name-header'>Roger Dirkx</div>
+              <div className='home-title'>Software Developer</div>
+              <div className='home-intro'>
+                <b>full stack </b> since 2021
+                <br></br>based in Geneva <br></br>
+                passionate about building functional and user-friendly applications
+              </div>
             </div>
           </Grid>
           <Grid container className='home-container'>
-            <Grid item xs={12} md={4} lg={4}>
-              <Stack
-                direction='row'
-                spacing={4}
-                alignItems='center'
-                justifyContent={'center'}
-                paddingBottom={1}
-              >
-                <Item elevation={5} id={'React'} onClick={handleItemClick}>
-                  React
-                </Item>
-                <Item elevation={5} id={'Typescript'} onClick={handleItemClick}>
-                  Typescript
-                </Item>
-                <Item elevation={5} id={'Javascript'} onClick={handleItemClick}>
-                  Javascript
-                </Item>
-              </Stack>
-            </Grid>
-            <Grid item xs={12} md={4} lg={4}>
-              <Stack
-                direction='row'
-                spacing={4}
-                alignItems='center'
-                justifyContent={'center'}
-                paddingBottom={1}
-              >
-                <Item elevation={5} id={'.NET'} onClick={handleItemClick}>
-                  .NET
-                </Item>
-                <Item elevation={5} id={'CI/CD'} onClick={handleItemClick}>
-                  CI/CD
-                </Item>
-                <Item elevation={5} id={'AWS'} onClick={handleItemClick}>
-                  AWS
-                </Item>
-              </Stack>
-            </Grid>
-            <Grid item xs={12} md={4} lg={4}>
-              <Stack
-                direction='row'
-                spacing={4}
-                alignItems='center'
-                justifyContent={'center'}
-              >
-                <Item elevation={5} id={'Java'} onClick={handleItemClick}>
-                  Java
-                </Item>
-                <Item elevation={5} id={'C#'} onClick={handleItemClick}>
-                  C#
-                </Item>
-                <Item elevation={5} id={'GIT'} onClick={handleItemClick}>
-                  GIT
-                </Item>
-              </Stack>
-            </Grid>
             <Grid item xs={12} md={12} lg={12} className='arrow'>
               <div onClick={handleArrowClick}>
                 <a>

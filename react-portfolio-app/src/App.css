@@ -36,7 +36,7 @@ img {
 
 /* -------------- home */
 .home-container {
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 .home-title {
@@ -46,12 +46,26 @@ img {
   padding-top: 0.5em;
 }
 
+.home-box {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding-top: 2em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 70%;
+}
+
 .home-intro {
   font-size: 1.5em;
   font-weight: 200;
   text-align: center;
-  padding-top: 1em;
+  padding: 1em;
+  color: rgb(12, 93, 12);
 }
+
 
 .fullstack {
   font-weight: bold;
@@ -61,7 +75,6 @@ img {
   font-size: 3em;
   font-size: 2em;
   text-align: center;
-  padding-top: 5em;
 }
 
 .projects-page-github {
@@ -79,6 +92,10 @@ img {
 }
 
 /* -------------- projects */
+.skills-div {
+  padding-top: 2em;
+}
+
 .projects-container {
   background-color: rgb(25,26,30,255);
 }
