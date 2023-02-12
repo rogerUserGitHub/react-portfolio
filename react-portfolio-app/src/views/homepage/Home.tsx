@@ -383,15 +383,11 @@ export default function Home() {
                   }}
                 >
                   <FadeInWhenVisible>
-                    <CardActionArea
-                      href={`https://dailycrypto-react.netlify.app/`}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+                    <CardActionArea href={``} target='_blank' rel='noopener noreferrer'>
                       <CardMedia
                         component='img'
                         src={constructionimage}
-                        alt='dailycrypto'
+                        alt='construction'
                         style={Style}
                       />
                       <CardContent>
