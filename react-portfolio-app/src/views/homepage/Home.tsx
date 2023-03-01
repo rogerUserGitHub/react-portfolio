@@ -1,4 +1,3 @@
-import Stack from '@mui/material/Stack';
 import {
   Card,
   CardActionArea,
@@ -19,7 +18,6 @@ import todo from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio
 import { motion, useScroll } from 'framer-motion';
 import Dialog from '../../common/components/Dialog';
 import { handleChipClick } from '../../common/utils/HelperMethods';
-import { Item } from '../../common/components/Item';
 import { Style } from './Home.Styles';
 
 export default function Home() {
@@ -52,11 +50,6 @@ export default function Home() {
   /*
    * handlers
    */
-  const handleItemClick = (evt: any) => {
-    setInfoItem(evt.target.id);
-    setInfoOpen(true);
-  };
-
   const handleArrowClick = () => {
     headerRefProjects?.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -141,7 +134,7 @@ export default function Home() {
                   >
                     <FadeInWhenVisible>
                       <CardActionArea
-                        href={``}
+                        href={`https://wordle-1a9cb.web.app/signup`}
                         target='_blank'
                         rel='noopener noreferrer'
                       >
@@ -203,7 +196,7 @@ export default function Home() {
                 >
                   <FadeInWhenVisible>
                     <CardActionArea
-                      href={`https://todo-app-fedc3.web.app/`}
+                      href={`https://todo-app-fedc3.web.app/signup`}
                       target='_blank'
                       rel='noopener noreferrer'
                     >
