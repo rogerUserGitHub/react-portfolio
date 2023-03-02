@@ -27,13 +27,11 @@ export default function About() {
     padding: '1rem',
     borderRadius: '4%',
     transition: 'all 0.3s ease',
-    fontFamily: 'Helvetica, Arial, sans-serif',
     color: 'black',
-    textShadow: '1px 1px 1px rgba(0,0,0,0.2)',
     '&:hover': {
-      boxShadow: '0px 0px 20px 0px rgba(0,0,0,0.7)',
+      boxShadow: '0px 0px 20px 0px rgba(0,0,0,0.4)',
     },
-    background: 'rgba(255, 255, 255, 0.6)',
+    background: 'white',
   });
 
   const ImagesContact = styled(Grid)({
@@ -67,8 +65,8 @@ export default function About() {
   });
 
   const SkillBadge = styled('div')({
-    backgroundColor: '#006600',
-    color: '#fff',
+    background: 'linear-gradient(180deg, #f5f5f5, #d9d9d9)',
+    color: 'green',
     borderRadius: '1rem',
     padding: '0.5rem 1rem',
     marginRight: '1rem',
