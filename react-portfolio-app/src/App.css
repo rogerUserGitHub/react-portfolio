@@ -149,6 +149,13 @@ img:hover{
   text-align: left;
 }
 
+.download-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+
 /* -------------- footer */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 

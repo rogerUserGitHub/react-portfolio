@@ -34,7 +34,6 @@ body, html {
 
 .bg-projects {
   background-color: rgba(25,26,30,255);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,10 +44,19 @@ body, html {
 
   /* Full height */
   height: 100vh;
+  
 }
 
 .bg-about-2 {
-  background: linear-gradient(90deg, rgb(158, 158, 158) 10%, rgb(205, 208, 205) 95%);
+  background: rgb(68, 67, 67);
+  padding-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.bg-about-exp {
+  background: linear-gradient(to bottom, rgb(144, 142, 142) 20%, rgb(68, 67, 67) 80%);
+  padding-bottom: 5rem;
+  padding-left: 6rem;
 }
 
 .bg-about-footer {
