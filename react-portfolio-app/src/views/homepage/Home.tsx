@@ -10,11 +10,11 @@ import {
 } from '@mui/material';
 import { useRef, useState } from 'react';
 import About from '../about/About';
-import wordle from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/wordle.jpg';
-import cryptoImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/dailycrypto.jpg';
-import weatherImage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/weatherapp.jpg';
-import constructionimage from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/construction.jpg';
-import todo from 'C:/Users/RDIRKX87/source/repos/react-portfolio/react-portfolio-app/src/images/todo.png';
+import wordle from '../../images/wordle.jpg';
+import cryptoImage from '../..//images/dailycrypto.jpg';
+import weatherImage from '../../images/weatherapp.jpg';
+import constructionimage from '../../construction.jpg';
+import todo from '../../images/todo.png';
 import { motion, useScroll } from 'framer-motion';
 import Dialog from '../../common/components/Dialog';
 import { handleChipClick } from '../../common/utils/HelperMethods';

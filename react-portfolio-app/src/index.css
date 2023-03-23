@@ -21,7 +21,7 @@ body, html {
 
 .bg-homepage {
   /* The image used */
-  background-image: url("C:\Users\RDIRKX87\source\repos\react-portfolio\react-portfolio-app\src\bw_bg.jpg");
+  background-image: url("bw_bg.jpg");
 
   /* Full height */
   height: 100vh;
