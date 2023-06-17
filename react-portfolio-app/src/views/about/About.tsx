@@ -1,7 +1,6 @@
 import { Container, Grid } from '@mui/material';
 import Footer from '../../common/components/Footer';
 import DownloadButton from '../../common/components/Download';
-import { styled } from '@mui/material/styles';
 import {
   ImagesContact,
   ImagesContactIcon,
@@ -14,7 +13,6 @@ import {
 export default function About() {
   return (
     <>
-      <div className='bg-about'>
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} md={12} lg={12}>
@@ -89,7 +87,6 @@ export default function About() {
           </Container>
         </div>
         <Footer />
-      </div>
     </>
   );
 }

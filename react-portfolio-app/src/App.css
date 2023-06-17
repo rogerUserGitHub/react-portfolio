@@ -3,7 +3,6 @@
 }
 
 .box {
-  background: red;
   height: 100%;
 }
 
@@ -164,8 +163,6 @@ img:hover{
 section {
   width: 100%;
   display: inline-block;
-  background: #ccc;
-  height: 60vh;
   text-align: center;
   font-size: 22px;
   font-weight: 700;

@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
   background-color: rgba(25,26,30,255);
 }
 
@@ -39,24 +38,10 @@ body, html {
   background-size: cover;
 }
 
-.bg-about {
-  background-color: rgba(25,26,30,255);
-
-  /* Full height */
-  height: 100vh;
-  
-}
-
 .bg-about-2 {
   background: rgb(68, 67, 67);
   padding-bottom: 1.5rem;
   justify-content: center;
-}
-
-.bg-about-exp {
-  background: linear-gradient(to bottom, rgb(144, 142, 142) 20%, rgb(68, 67, 67) 80%);
-  padding-bottom: 5rem;
-  padding-left: 6rem;
 }
 
 .bg-about-footer {

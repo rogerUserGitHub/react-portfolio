@@ -1,3 +1,3 @@
 export const Style = {
-  height: 300,
+  height: 250,
 };

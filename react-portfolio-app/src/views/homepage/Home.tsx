@@ -34,8 +34,8 @@ export default function Home() {
   const FadeInWhenVisible = ({ children }: any) => {
     return (
       <motion.div
-        initial='hidden'
-        whileInView='visible'
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         variants={{
@@ -81,28 +81,29 @@ export default function Home() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className='h-2 origin-left fixed right-0 top-0
-        left-0 bg-gradient-to-r from-sky-500 to-blue-700 z-50'
+        className="h-2 origin-left fixed right-0 top-0
+        left-0 bg-gradient-to-r from-sky-500 to-blue-700 z-50"
       />
-      <div className='bg-homepage'>
+      <div className="bg-homepage">
         <Container>
           <Grid item xs={12} md={12} lg={12}>
-            <div className='home-box'>
-              <div className='hello-header'>Hello, I'm</div>
-              <div className='name-header'>Roger Dirkx</div>
-              <div className='home-title'>Software Developer</div>
-              <div className='home-intro'>
+            <div className="home-box">
+              <div className="hello-header">Hello, I'm</div>
+              <div className="name-header">Roger Dirkx</div>
+              <div className="home-title">Software Developer</div>
+              <div className="home-intro">
                 <b>full stack </b> since 2021
                 <br></br>based in Geneva <br></br>
-                passionate about building functional and user-friendly applications
+                passionate about building functional and user-friendly
+                applications
               </div>
             </div>
           </Grid>
-          <Grid container className='home-container'>
-            <Grid item xs={12} md={12} lg={12} className='arrow'>
+          <Grid container className="home-container">
+            <Grid item xs={12} md={12} lg={12} className="arrow">
               <div onClick={handleArrowClick}>
                 <a>
-                  <img src='/arrow.png'></img>
+                  <img src="/arrow.png"></img>
                 </a>
               </div>
             </Grid>
@@ -110,11 +111,11 @@ export default function Home() {
         </Container>
       </div>
       <div ref={headerRefProjects}>
-        <div className='bg-projects'>
-          <Container className='projects-container'>
+        <div className="bg-projects">
+          <Container className="projects-container">
             <Grid container>
               <Grid item xs={12} md={12} lg={12}>
-                <div className='name-header-projects'>Projects</div>
+                <div className="name-header-projects">Projects</div>
               </Grid>
               <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
                 <Card
@@ -130,33 +131,43 @@ export default function Home() {
                   <FadeInWhenVisible>
                     <CardActionArea
                       href={`https://todo-app-fedc3.web.app/signup`}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <CardMedia component='img' src={aidy} alt='aidy' style={Style} />
+                      <CardMedia
+                        component="img"
+                        src={aidy}
+                        alt="aidy"
+                        style={Style}
+                      />
                       <CardContent>
-                        <Typography gutterBottom variant='h5' component='div'>
+                        <Typography gutterBottom variant="h5" component="div">
                           AIDY: Health Concierge app for Android/iOS
                         </Typography>
-                        <Typography variant='body2' color='white' paddingBottom={1}>
-                          Collaborative project for the health-tech start-up AIDY
+                        <Typography
+                          variant="body2"
+                          color="white"
+                          paddingBottom={1}
+                        >
+                          Collaborative project for the health-tech start-up
+                          AIDY
                         </Typography>
                         <Chip
-                          label='React Native'
-                          color='success'
-                          variant='filled'
+                          label="React Native"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('react-native')}
                         ></Chip>
                         <Chip
-                          label='Chat GPT'
-                          color='success'
-                          variant='filled'
+                          label="Chat GPT"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('chatgpt')}
                         ></Chip>
                         <Chip
-                          label='Aidy Health'
-                          color='success'
-                          variant='filled'
+                          label="Aidy Health"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('aidy')}
                         ></Chip>
                       </CardContent>
@@ -164,13 +175,11 @@ export default function Home() {
                   </FadeInWhenVisible>
                 </Card>
               </Grid>
-
-
               <Grid
                 container
-                direction='column-reverse'
-                justifyContent='space-around'
-                alignItems='flex-end'
+                direction="column-reverse"
+                justifyContent="space-around"
+                alignItems="flex-end"
               >
                 <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
                   <Card
@@ -186,46 +195,50 @@ export default function Home() {
                     <FadeInWhenVisible>
                       <CardActionArea
                         href={`https://wordle-1a9cb.web.app/signup`}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <CardMedia
-                          component='img'
+                          component="img"
                           src={wordle}
-                          alt='wordle'
+                          alt="wordle"
                           style={Style}
                         />
                         <CardContent>
-                          <Typography gutterBottom variant='h5' component='div'>
+                          <Typography gutterBottom variant="h5" component="div">
                             Wordle clone with FireBase and Tailwind
                           </Typography>
-                          <Typography variant='body2' color='white' paddingBottom={1}>
-                            Application built in React.js, based on the popular wordle
-                            game. Use of Firebase Authentication and firestore data
-                            storage
+                          <Typography
+                            variant="body2"
+                            color="white"
+                            paddingBottom={1}
+                          >
+                            Application built in React.js, based on the popular
+                            wordle game. Use of Firebase Authentication and
+                            firestore data storage
                           </Typography>
                           <Chip
-                            label='React'
-                            color='success'
-                            variant='filled'
+                            label="React"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('react')}
                           ></Chip>
                           <Chip
-                            label='Javascript'
-                            color='success'
-                            variant='filled'
+                            label="Javascript"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('javascript')}
                           ></Chip>
                           <Chip
-                            label='Firebase'
-                            color='success'
-                            variant='filled'
+                            label="Firebase"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('firebase')}
                           ></Chip>
                           <Chip
-                            label='Tailwind'
-                            color='success'
-                            variant='filled'
+                            label="Tailwind"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('tailwind')}
                           ></Chip>
                         </CardContent>
@@ -248,34 +261,43 @@ export default function Home() {
                   <FadeInWhenVisible>
                     <CardActionArea
                       href={`https://todo-app-fedc3.web.app/signup`}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <CardMedia component='img' src={todo} alt='todo' style={Style} />
+                      <CardMedia
+                        component="img"
+                        src={todo}
+                        alt="todo"
+                        style={Style}
+                      />
                       <CardContent>
-                        <Typography gutterBottom variant='h5' component='div'>
+                        <Typography gutterBottom variant="h5" component="div">
                           Todo app with FireBase and Tailwind
                         </Typography>
-                        <Typography variant='body2' color='white' paddingBottom={1}>
-                          Testproject using firebase (firestore and hosting) and css
-                          tailwind
+                        <Typography
+                          variant="body2"
+                          color="white"
+                          paddingBottom={1}
+                        >
+                          Testproject using firebase (firestore and hosting) and
+                          css tailwind
                         </Typography>
                         <Chip
-                          label='React'
-                          color='success'
-                          variant='filled'
+                          label="React"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('react')}
                         ></Chip>
                         <Chip
-                          label='FireBase'
-                          color='success'
-                          variant='filled'
+                          label="FireBase"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('firebase')}
                         ></Chip>
                         <Chip
-                          label='Tailwind'
-                          color='success'
-                          variant='filled'
+                          label="Tailwind"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('tailwind')}
                         ></Chip>
                       </CardContent>
@@ -285,9 +307,9 @@ export default function Home() {
               </Grid>
               <Grid
                 container
-                direction='column-reverse'
-                justifyContent='space-around'
-                alignItems='flex-end'
+                direction="column-reverse"
+                justifyContent="space-around"
+                alignItems="flex-end"
               >
                 <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
                   <Card
@@ -303,53 +325,57 @@ export default function Home() {
                     <FadeInWhenVisible>
                       <CardActionArea
                         href={`https://dailycrypto-react.netlify.app/`}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <CardMedia
-                          component='img'
+                          component="img"
                           src={cryptoImage}
-                          alt='dailycrypto'
+                          alt="dailycrypto"
                           style={Style}
                         />
                         <CardContent>
-                          <Typography gutterBottom variant='h5' component='div'>
+                          <Typography gutterBottom variant="h5" component="div">
                             DailyCrypto
                           </Typography>
-                          <Typography variant='body2' color='white' paddingBottom={1}>
-                            Application built in React.tsc, providing up-to-date crypto
-                            rates and news using third-party API's. NOTE: currently
-                            experiencing issues due to change of the free tier of the
-                            coingecko API plan.
+                          <Typography
+                            variant="body2"
+                            color="white"
+                            paddingBottom={1}
+                          >
+                            Application built in React.tsc, providing up-to-date
+                            crypto rates and news using third-party API's. NOTE:
+                            currently experiencing issues due to change of the
+                            free tier of the coingecko API plan.
                           </Typography>
                           <Chip
-                            label='React'
-                            color='success'
-                            variant='filled'
+                            label="React"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('react')}
                           ></Chip>
                           <Chip
-                            label='Typescript'
-                            color='success'
-                            variant='filled'
+                            label="Typescript"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('typescript')}
                           ></Chip>
                           <Chip
-                            label='Third-party APIs'
-                            color='success'
-                            variant='filled'
+                            label="Third-party APIs"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('coingecko')}
                           ></Chip>
                           <Chip
-                            label='MUI library'
-                            color='success'
-                            variant='filled'
+                            label="MUI library"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('mui')}
                           ></Chip>
                           <Chip
-                            label='i18n translation'
-                            color='success'
-                            variant='filled'
+                            label="i18n translation"
+                            color="success"
+                            variant="filled"
                             onClick={() => openInNewTab('i18n')}
                           ></Chip>
                         </CardContent>
@@ -370,39 +396,44 @@ export default function Home() {
                   <FadeInWhenVisible>
                     <CardActionArea
                       href={`https://dailyweather-react.netlify.app/`}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <CardMedia
-                        component='img'
+                        component="img"
                         src={weatherImage}
-                        alt='weatherimage'
+                        alt="weatherimage"
                         style={Style}
                       />
                       <CardContent>
-                        <Typography gutterBottom variant='h5' component='div'>
+                        <Typography gutterBottom variant="h5" component="div">
                           Weather App
                         </Typography>
-                        <Typography variant='body2' color='white' paddingBottom={1}>
-                          React app that displays real-time weather data based on
-                          user-input. Background changes depending on weather type.
+                        <Typography
+                          variant="body2"
+                          color="white"
+                          paddingBottom={1}
+                        >
+                          React app that displays real-time weather data based
+                          on user-input. Background changes depending on weather
+                          type.
                         </Typography>
                         <Chip
-                          label='React'
-                          color='success'
-                          variant='filled'
+                          label="React"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('react')}
                         ></Chip>
                         <Chip
-                          label='Typescript'
-                          color='success'
-                          variant='filled'
+                          label="Typescript"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('typescript')}
                         ></Chip>
                         <Chip
-                          label='Third-party APIs'
-                          color='success'
-                          variant='filled'
+                          label="Third-party APIs"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('rapidapi')}
                         ></Chip>
                       </CardContent>
@@ -413,9 +444,9 @@ export default function Home() {
             </Grid>
             <Grid
               container
-              direction='column-reverse'
-              justifyContent='space-around'
-              alignItems='flex-end'
+              direction="column-reverse"
+              justifyContent="space-around"
+              alignItems="flex-end"
             >
               <Grid item xs={12} md={12} lg={12}>
                 <Card
@@ -429,46 +460,58 @@ export default function Home() {
                   }}
                 >
                   <FadeInWhenVisible>
-                    <CardActionArea href={``} target='_blank' rel='noopener noreferrer'>
+                    <CardActionArea
+                      href={``}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <CardMedia
-                        component='img'
+                        component="img"
                         src={constructionimage}
-                        alt='construction'
+                        alt="construction"
                         style={Style}
                       />
                       <CardContent>
-                        <Typography gutterBottom variant='h5' component='div'>
+                        <Typography gutterBottom variant="h5" component="div">
                           RecipeApp
                         </Typography>
-                        <Typography variant='body2' color='white' paddingBottom={1}>
-                          This react application will allow a user to enter ingredients,
-                          which will return suitable recipes.
+                        <Typography
+                          variant="body2"
+                          color="white"
+                          paddingBottom={1}
+                        >
+                          This react application will allow a user to enter
+                          ingredients, which will return suitable recipes.
                         </Typography>
                         <Chip
-                          label='React'
-                          color='success'
-                          variant='filled'
+                          label="React"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('react')}
                         ></Chip>
                         <Chip
-                          label='Typescript'
-                          color='success'
-                          variant='filled'
+                          label="Typescript"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('typescript')}
                         ></Chip>
                         <Chip
-                          label='Third-party APIs'
-                          color='success'
-                          variant='filled'
+                          label="Third-party APIs"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('coingecko')}
                         ></Chip>
                         <Chip
-                          label='MUI library'
-                          color='success'
-                          variant='filled'
+                          label="MUI library"
+                          color="success"
+                          variant="filled"
                           onClick={() => openInNewTab('mui')}
                         ></Chip>
-                        <Chip label='Darkmode' color='success' variant='filled'></Chip>
+                        <Chip
+                          label="Darkmode"
+                          color="success"
+                          variant="filled"
+                        ></Chip>
                       </CardContent>
                     </CardActionArea>
                   </FadeInWhenVisible>
@@ -476,10 +519,10 @@ export default function Home() {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item xs={12} md={12} lg={12} className='arrow-projects'>
+              <Grid item xs={12} md={12} lg={12} className="arrow-projects">
                 <div onClick={handleArrowClick2}>
                   <a>
-                    <img src='/arrow.png'></img>
+                    <img src="/arrow.png"></img>
                   </a>
                 </div>
               </Grid>
