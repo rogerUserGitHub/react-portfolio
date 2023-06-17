@@ -64,6 +64,15 @@ export const handleChipClick = (name: string): any => {
     case 'javascript':
       url = 'https://www.javascript.com/';
       break;
+    case 'react-native':
+      url = 'https://reactnative.dev/';
+      break;
+    case 'chatgpt':
+      url = 'https://openai.com/blog/chatgpt';
+      break;
+    case 'aidy':
+      url = 'https://www.linkedin.com/company/aidyhealth/?originalSubdomain=ch';
+      break;
   }
   return url;
 };

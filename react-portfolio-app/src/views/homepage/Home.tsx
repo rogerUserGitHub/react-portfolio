@@ -14,6 +14,7 @@ import wordle from '../../images/wordle.jpg';
 import cryptoImage from '../..//images/dailycrypto.jpg';
 import weatherImage from '../../images/weatherapp.jpg';
 import constructionimage from '../../construction.jpg';
+import aidy from '../../images/aidy.jpg';
 import todo from '../../images/todo.png';
 import { motion, useScroll } from 'framer-motion';
 import Dialog from '../../common/components/Dialog';
@@ -115,6 +116,56 @@ export default function Home() {
               <Grid item xs={12} md={12} lg={12}>
                 <div className='name-header-projects'>Projects</div>
               </Grid>
+              <Grid item xs={12} md={12} lg={12} paddingBottom={4}>
+                <Card
+                  sx={{
+                    maxWidth: 600,
+                    height: 480,
+                    backgroundColor: 'rgba(25, 26, 30, 255)',
+                    color: 'rgba(116, 162, 41, 0.74);',
+                    textAlign: 'right',
+                    alignItems: 'flex-end',
+                  }}
+                >
+                  <FadeInWhenVisible>
+                    <CardActionArea
+                      href={`https://todo-app-fedc3.web.app/signup`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <CardMedia component='img' src={aidy} alt='aidy' style={Style} />
+                      <CardContent>
+                        <Typography gutterBottom variant='h5' component='div'>
+                          AIDY: Health Concierge app for Android/iOS
+                        </Typography>
+                        <Typography variant='body2' color='white' paddingBottom={1}>
+                          Collaborative project for the health-tech start-up AIDY
+                        </Typography>
+                        <Chip
+                          label='React Native'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('react-native')}
+                        ></Chip>
+                        <Chip
+                          label='Chat GPT'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('chatgpt')}
+                        ></Chip>
+                        <Chip
+                          label='Aidy Health'
+                          color='success'
+                          variant='filled'
+                          onClick={() => openInNewTab('aidy')}
+                        ></Chip>
+                      </CardContent>
+                    </CardActionArea>
+                  </FadeInWhenVisible>
+                </Card>
+              </Grid>
+
+
               <Grid
                 container
                 direction='column-reverse'
@@ -141,7 +192,7 @@ export default function Home() {
                         <CardMedia
                           component='img'
                           src={wordle}
-                          alt='dailycrypto'
+                          alt='wordle'
                           style={Style}
                         />
                         <CardContent>
@@ -267,7 +318,9 @@ export default function Home() {
                           </Typography>
                           <Typography variant='body2' color='white' paddingBottom={1}>
                             Application built in React.tsc, providing up-to-date crypto
-                            rates and news using third-party API's.
+                            rates and news using third-party API's. NOTE: currently
+                            experiencing issues due to change of the free tier of the
+                            coingecko API plan.
                           </Typography>
                           <Chip
                             label='React'
