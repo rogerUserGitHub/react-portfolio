@@ -130,7 +130,7 @@ export default function Home() {
                 >
                   <FadeInWhenVisible>
                     <CardActionArea
-                      href={`https://todo-app-fedc3.web.app/signup`}
+                      href={`https://www.linkedin.com/company/aidyhealth/?originalSubdomain=ch`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
